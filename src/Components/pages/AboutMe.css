@@ -1,0 +1,80 @@
+.aboutme{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(251, 251, 251);
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    padding: 10px;
+    align-self: center;
+}
+.myImage{
+    height: 50%;
+    background-color: green;
+    max-width: 600px;
+    min-width: 300px;
+    height: 350px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    /* border: 1px dashed green; */
+}
+
+.myDetails{
+    /* background-color: antiquewhite; */
+    margin: 100px 0;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 55%;
+    align-self: center;
+}
+
+.myDetails h2{
+    color: rgb(62, 62, 62);
+    margin: 30px 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 6vw;
+}
+
+.myDetails p{
+    color: rgb(88, 87, 87);
+    padding-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 0.7px;
+    font-size: 22px;
+    width: 80%;
+    padding-top: 52px;
+}
+
+
+
+@media screen and (max-width: 550px) {
+    .myImage{
+        height: 350px;
+        min-width: 300px;
+        max-width: 600px;
+    }
+    .aboutme{
+        flex-direction: column;
+    }
+    .myDetails{
+        width: 90%;
+        margin: 10px;
+        padding: 4px
+    }
+    .myDetails p{
+        letter-spacing: 0.25px;
+        font-size: 16px;
+        width: 100%;
+        padding-top: 0px;
+    }
+}
+
+.myImage img{
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
