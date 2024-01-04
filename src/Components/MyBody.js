@@ -1,36 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./MyBody.css";
 import Navbar from "./Navbar";
 import AboutMe from "./pages/AboutMe";
+import Skills from "./pages/Skills";
 // import Projects from "./Projects";
 // import Contact from "./Contact";
 
 export default function MyBody() {
-  const [scrolling, setScrolling] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
-  }, []);
-
-  const mainStyle = {
-    backgroundColor: scrolling ? "rgb(155 213 189 / 83%)" : "#dee2e6d4",
-    transition: "background-color 1.5s ease-in-out",
-  };
-
   return (
-    <div className="mainBody" style={mainStyle}>
+    <div className="mainBody">
       <div className="myPic">
         <div>
           <Navbar />
@@ -54,10 +32,7 @@ export default function MyBody() {
       </div>
 
       <AboutMe />
-      {/* <Educations handleScroll={scrolling} />
-      <Academics /> */}
-      {/* <Projects />
-      <Contact /> */}
+      <Skills />
     </div>
   );
 }

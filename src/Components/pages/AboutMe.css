@@ -10,7 +10,7 @@
 }
 .myImage{
     height: 50%;
-    background-color: green;
+    /* background-color: green; */
     max-width: 600px;
     min-width: 300px;
     height: 350px;
