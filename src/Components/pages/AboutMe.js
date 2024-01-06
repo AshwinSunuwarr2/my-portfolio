@@ -24,8 +24,8 @@ export default function AboutMe() {
 
   const upTransition = {
     // backgroundColor: scrolling ? "rgb(155 213 189 / 83%)" : "#dee2e6d4",
-    transform: scrolling ? "translateY(0px)" : "translateY(450px)",
-    transition: "transform 5s ease-out",
+    transform: scrolling ? "translateY(0px)" : "translateY(100px)",
+    transition: "transform 2s ease-out",
   };
   return (
     <div className="aboutme">
