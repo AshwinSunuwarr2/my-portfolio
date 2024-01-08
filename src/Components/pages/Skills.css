@@ -32,14 +32,14 @@
     flex-direction: row;
     height: 85%;
     width: 85%;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
 .mains{
     width: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     /* background-color: orange; */
   }
@@ -54,6 +54,10 @@
     width: 170px;
   }
 
+.otherSkills{
+    border: 2px solid gray;
+    width: 50%;
+  }
   .box{
     height: 90px;
     width: 90px;

@@ -1,77 +1,90 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Skills.css";
-import {
-  FaPython,
-  FaStar,
-  FaStarHalfAlt,
-  FaReact,
-  FaPlus,
-} from "react-icons/fa";
-import { FaC } from "react-icons/fa6";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiDjango } from "react-icons/si";
+import { FaStar } from "react-icons/fa";
+import python from "../images/python.png";
+import c from "../images/c.png";
+import cplus from "../images/cplus.png";
+import dotnet from "../images/dotnet.png";
+import js from "../images/js.png";
+// import Django from "../images/Django.png";
+import react from "../images/react.png";
+import dj from "../images/django.svg";
+import html from "../images/html.png";
+import css from "../images/css.png";
+import git from "../images/git.png";
+import github from "../images/github.png";
+// import * as icons from "../images";
 
 function Skills() {
-  const [skills, setSkills] = useState([
+  const skills = [
     {
+      id: "1",
       title: "Python",
       rating: "5",
-      icon: (
-        <FaPython style={{ color: "#48aadb", height: "55px", width: "55px" }} />
-      ),
+      icon: python,
     },
     {
+      id: "2",
       title: "JS",
       rating: "5",
-      icon: (
-        <IoLogoJavascript
-          style={{ color: "orange", height: "55px", width: "55px" }}
-        />
-      ),
+      icon: js,
     },
     {
+      id: "3",
       title: "React",
       rating: "5",
-      icon: (
-        <FaReact style={{ color: "orange", height: "55px", width: "55px" }} />
-      ),
+      icon: react,
     },
     {
+      id: "4",
       title: "Django",
       rating: "5",
-      icon: (
-        <SiDjango style={{ color: "orange", height: "55px", width: "55px" }} />
-      ),
+      icon: dj,
     },
     {
+      id: "5",
       title: "React Native",
       rating: "5",
-      icon: (
-        <FaReact style={{ color: "orange", height: "55px", width: "55px" }} />
-      ),
+      icon: react,
     },
     {
+      id: "6",
       title: ".Net",
       rating: "5",
-      icon: (
-        <IoLogoJavascript
-          style={{ color: "orange", height: "55px", width: "55px" }}
-        />
-      ),
+      icon: dotnet,
     },
     {
+      id: "7",
       title: "C",
       rating: "5",
-      icon: <FaC style={{ color: "orange", height: "55px", width: "55px" }} />,
+      icon: c,
     },
     {
+      id: "8",
       title: "C++",
       rating: "5",
-      icon: (
-        <FaPlus style={{ color: "orange", height: "16px", width: "16px" }} />
-      ),
+      icon: cplus,
     },
-  ]);
+  ];
+
+  const otherSkills = [
+    {
+      title: "HTML",
+      icon: html,
+    },
+    {
+      title: "CSS",
+      icon: css,
+    },
+    {
+      title: "Git",
+      icon: git,
+    },
+    {
+      title: "GitHub",
+      icon: github,
+    },
+  ];
   return (
     <div className="Skills">
       <div className="skillsAcquired">
@@ -85,7 +98,7 @@ function Skills() {
       <div className="kalaaContainer">
         <div className="mains">
           {skills.map((item, index) => (
-            <div className="kalaaHaru">
+            <div className="kalaaHaru" key={index}>
               <div className="box">
                 <p>{item.title}</p>
                 <div>
@@ -97,11 +110,24 @@ function Skills() {
                   {/* <FaStarHalfAlt /> */}
                 </div>
               </div>
-              <div className="iconTest">{item.icon}</div>
+              <div className="iconTest">
+                <img
+                  src={item.icon}
+                  alt="PLicons"
+                  style={{ width: "55px", height: "55px", fill: "red" }}
+                />
+              </div>
             </div>
           ))}
         </div>
-        <div>others</div>
+        <div className="otherSkills">
+          {otherSkills.map(
+            (item, index) => (
+              <img src={item.icon} alt="icons" width="55px" height="55px" />
+            )
+            // console.log(items.title);
+          )}
+        </div>
       </div>
     </div>
   );
