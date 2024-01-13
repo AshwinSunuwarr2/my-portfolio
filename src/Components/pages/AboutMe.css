@@ -1,7 +1,8 @@
+
 .aboutme{
     display: flex;
     flex-direction: row;
-    background-color: rgb(251, 251, 251);
+    /* background-color: rgb(251, 251, 251); */
     width: 100%;
     height: 100%;
     justify-content: space-around;

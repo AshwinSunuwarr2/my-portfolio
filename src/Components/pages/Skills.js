@@ -13,6 +13,9 @@ import html from "../images/html.png";
 import css from "../images/css.png";
 import git from "../images/git.png";
 import github from "../images/github.png";
+import mysql from "../images/mysql.png";
+import flutter from "../images/flutter.png";
+import skillsImg from "../images/skills.jpg";
 // import * as icons from "../images";
 
 function Skills() {
@@ -84,6 +87,14 @@ function Skills() {
       title: "GitHub",
       icon: github,
     },
+    {
+      title: "MySql",
+      icon: mysql,
+    },
+    {
+      title: "Flutter",
+      icon: flutter,
+    },
   ];
   return (
     <div className="Skills">
@@ -102,11 +113,8 @@ function Skills() {
               <div className="box">
                 <p>{item.title}</p>
                 <div>
-                  <FaStar style={iconStyle} />
-                  <FaStar style={iconStyle} />
-                  <FaStar style={iconStyle} />
-                  <FaStar style={iconStyle} />
-                  <FaStar style={iconStyle} />
+                  {/* <FaStar style={iconStyle} /> */}
+                  <p style={{ fontSize: "12px", fontWeight: "500" }}>NCIT</p>
                   {/* <FaStarHalfAlt /> */}
                 </div>
               </div>
@@ -114,16 +122,22 @@ function Skills() {
                 <img
                   src={item.icon}
                   alt="PLicons"
-                  style={{ width: "55px", height: "55px", fill: "red" }}
+                  style={{ width: "55px", height: "55px" }}
                 />
               </div>
             </div>
           ))}
         </div>
+        <div className="skillPhoto">
+          <img src={skillsImg} alt="skill bulb" />
+        </div>
         <div className="otherSkills">
           {otherSkills.map(
             (item, index) => (
-              <img src={item.icon} alt="icons" width="55px" height="55px" />
+              <div className="otherSkillsIcon">
+                <img src={item.icon} alt="icons" className="imgIcon" />
+                <p className="iconComment">{item.title}</p>
+              </div>
             )
             // console.log(items.title);
           )}

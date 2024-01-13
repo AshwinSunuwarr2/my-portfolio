@@ -1,17 +1,22 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 .Skills{
     height: 85vh;
     width: 100%;
-    background-color: rgb(195, 228, 228);
+    /* background-color: rgb(195, 228, 228); */
     display: flex;
     flex-direction: row;
 }
 
 .skillsAcquired {
     margin: 20px 70px;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     display: flex;
     flex-direction: row;
     justify-content: center; /* Align items vertically in the cross-axis */
+    align-items: center;
   }
   
   .skillsAcquired h2 {
@@ -27,7 +32,7 @@
 
   .kalaaContainer{
     margin: 30px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(219, 120, 120); */
     display: flex;
     flex-direction: row;
     height: 85%;
@@ -42,6 +47,7 @@
     justify-content: center;
     flex-wrap: wrap;
     /* background-color: orange; */
+    height: 100%;
   }
 
   .kalaaHaru{
@@ -55,9 +61,76 @@
   }
 
 .otherSkills{
-    border: 2px solid gray;
-    width: 50%;
+    /* border: 2px solid gray; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    /* background-color: aqua; */
+    column-gap: 0px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
+  .otherSkillsIcon{
+    /* background-color: rgb(126, 126, 192); */
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+  }
+  .otherSkillsIcon img{
+    transition: all 0.3s;
+    width: 35px;
+    height: 35px;
+    resize: cover;
+    /* position: relative; */
+  }
+  .otherSkillsIcon img:hover{
+    width: 45px;
+    height: 45px;
+    /* box-shadow: 5px 5px 25px rgb(166, 165, 165); */
+  }
+
+  .otherSkillsIcon:hover .iconComment{
+    left: 105%;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .iconComment{
+    font-size: 12px;
+    width: 55px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    padding: 1px 10px;
+    border-radius: 4px;
+    position: relative;
+    top: -50%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 3s ease;
+  }
+
+  .iconComment::before{
+    content: "";
+    border: 10px solid black;
+    border-color: #0000 #000 #0000 #0000;
+    left: -28%;
+    position: absolute;
+    top: -0.5px;
+  }
+
+  .skillPhoto img{
+    width: 550px;
+    height: 100%;
+  }
+
   .box{
     height: 90px;
     width: 90px;
@@ -66,9 +139,13 @@
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    justify-content: space-around;
+    justify-content: center;
     padding-left: 10px;
+    padding-top: 9px;
     z-index: 0;
+    margin: 0px;
+    column-gap: 0px;
+    row-gap: 0px;
   }
   .box p{
     font-weight: 700;
