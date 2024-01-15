@@ -143,6 +143,7 @@ function Skills() {
           )}
         </div>
       </div>
+      <div className="rough"></div>
     </div>
   );
 }

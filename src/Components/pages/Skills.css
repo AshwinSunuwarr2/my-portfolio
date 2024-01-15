@@ -9,6 +9,11 @@
     display: flex;
     flex-direction: row;
 }
+.rough{
+  border-left: 20px solid rgba(241, 53, 53, 0.592);
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid rgba(254, 120, 37, 0.638);
+}
 
 .skillsAcquired {
     margin: 20px 70px;
