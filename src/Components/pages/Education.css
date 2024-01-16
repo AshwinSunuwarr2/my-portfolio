@@ -3,18 +3,24 @@
     padding: 0;
 }
 
+body{
+  font-family:'Tektur', sans-serif;
+}
+
 .eduContainer{
     display: flex;
     flex-direction: row;
-    justify-content: space-between; background-color: bisque;
+    justify-content: space-between; 
+    background-color: bisque;
     width: 100%;
+    align-items: center;
 }
 
 .vl {
     border-left: 3px solid green;
     border-right: 3px solid green;
     width: 10px;
-    height: 500px;
+    height: 760px;
     left: 50%;
     margin-left: -3px;
     top: 0;
@@ -28,29 +34,77 @@
     flex-direction: column;
     justify-content: space-around;
     position: relative;
-    font-family: 'Tektur', sans-serif;
-  }
+    gap: 50px;
+   }
 
     .topContent, .bottomContent, .soloContent{
     background-color: red;
+    /* background-image: url('C:/REACTS/myportfolio/src/Components/images/skills.jpg'); */
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 59% 41% 33% 67% / 40% 62% 38% 60% ;
     height:20rem;
     padding: 4rem;
-    /* display: flex; */
+    -webkit-filter: blur(2px) grayscale(50%)  contrast(60%);
+    /* -webkit-filter: blur(3px); */
+    -webkit-transition: all 0.5s ease-in-out;
+  }
+
+  .topContent:hover{
+    cursor: pointer;
+      -webkit-transform: scale(1.1,1.1);
+  }
+  .schoolName h1:hover{
+      cursor: pointer;
+  }
+  #topContent:hover > .schoolName h1 {
+    cursor: pointer; 
+    -webkit-transform: scale(1.1,1.1);
+}
+  .leftDiv .topContent{
+    background-image: url('https://theedunepal.ap-south-1.linodeobjects.com/schoolfair/clients/siddhasthalienglish/gallery/gallery/img-0075_1615970091.webp');
+  }
+  .schoolName{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -150%);
+   z-index: 2;
   }
   .leftDiv .bottomContent{
-    background-color: red;
+    background-image: url(https://lh3.googleusercontent.com/p/AF1QipPEBb-rrt7ZCDQbW124BM-sNdKB8-_HhYMUD89S=s1360-w1360-h1020);
+  }
+  .hsebName{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, 60%);
+   z-index: 2;
   }
   .rightDiv .soloContent{
-    background-color: red;
+    background-image: url(https://lh3.googleusercontent.com/p/AF1QipMzC4qO-RprR3IOGDfxd27Mz_XCRWfDLuGHRqVH=s1360-w1360-h1020);
   }
-  .eduContainer h2{
-    font-size: 28px; font-weight: 700; 
-    align-self: center;
+
+  .collegeName{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -40%);
+   z-index: 2;
   }
+
+  .eduContainer h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
   .eduContainer p{
     font-size: 16px;
     font-weight: 300;
     position: absolute;
     right: 15%;
+    color: white;
   }
