@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import AboutMe from "./pages/AboutMe";
 import Skills from "./pages/Skills";
 import Education from "./pages/Education";
+import Project from "./pages/Project";
 // import Projects from "./Projects";
 // import Contact from "./Contact";
 
@@ -37,6 +38,7 @@ export default function MyBody() {
       <AboutMe />
       <Skills />
       <Education />
+      <Project />
     </>
   );
 }
