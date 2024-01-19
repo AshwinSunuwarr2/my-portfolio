@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  transition: all 1s ease
 }
 
 body{
@@ -11,12 +12,57 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between; 
-    background-color: bisque;
+    /* background-color: bisque; */
     width: 100%;
     align-items: center;
-}
+  }
 
-.vl {
+  .building{
+    /* background-color: rgba(255, 0, 0, 0.305); */
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 1px 4px 4px 4px rgba(64, 64, 64, 0.336);
+    min-height: 48px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  .building h2{
+    text-align: center;
+    color: rgb(194, 129, 8);
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 7px;
+  }
+  .building h1{
+    text-align: center;
+    color: azure;
+    width: 100%;
+    background-color: orange;
+    /* border-top-right-radius: 12px;
+    border-top-left-radius: 12px; */
+    border-radius: 55px;
+    padding: 8px 16px;
+  }
+  .building p{
+    text-align: right;
+    color: orange;
+  }
+  .completedYear{
+    margin-left: 2rem;
+    margin-right: 1.5rem;
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+  }
+
+  .building:hover .completedYear{
+    cursor: pointer;
+    opacity: 1;
+  }
+
+/*   
+  .vl {
     border-left: 3px solid green;
     border-right: 3px solid green;
     width: 10px;
@@ -24,87 +70,15 @@ body{
     left: 50%;
     margin-left: -3px;
     top: 0;
-  }
-
+  } */
+  
   .eduContainer .leftDiv, .rightDiv{
     width: 50%;
-    /* background-color: blueviolet; */
     padding: 4rem 6rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     position: relative;
     gap: 50px;
-   }
-
-    .topContent, .bottomContent, .soloContent{
-    background-color: red;
-    /* background-image: url('C:/REACTS/myportfolio/src/Components/images/skills.jpg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 59% 41% 33% 67% / 40% 62% 38% 60% ;
-    height:20rem;
-    padding: 4rem;
-    -webkit-filter: blur(2px) grayscale(50%)  contrast(60%);
-    /* -webkit-filter: blur(3px); */
-    -webkit-transition: all 0.5s ease-in-out;
-  }
-
-  .topContent:hover{
-    cursor: pointer;
-      -webkit-transform: scale(1.1,1.1);
-  }
-  .schoolName h1:hover{
-      cursor: pointer;
-  }
-  #topContent:hover > .schoolName h1 {
-    cursor: pointer; 
-    -webkit-transform: scale(1.1,1.1);
-}
-  .leftDiv .topContent{
-    background-image: url('https://theedunepal.ap-south-1.linodeobjects.com/schoolfair/clients/siddhasthalienglish/gallery/gallery/img-0075_1615970091.webp');
-  }
-  .schoolName{
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -150%);
-   z-index: 2;
-  }
-  .leftDiv .bottomContent{
-    background-image: url(https://lh3.googleusercontent.com/p/AF1QipPEBb-rrt7ZCDQbW124BM-sNdKB8-_HhYMUD89S=s1360-w1360-h1020);
-  }
-  .hsebName{
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, 60%);
-   z-index: 2;
-  }
-  .rightDiv .soloContent{
-    background-image: url(https://lh3.googleusercontent.com/p/AF1QipMzC4qO-RprR3IOGDfxd27Mz_XCRWfDLuGHRqVH=s1360-w1360-h1020);
-  }
-
-  .collegeName{
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -40%);
-   z-index: 2;
-  }
-
-  .eduContainer h1{
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  .eduContainer p{
-    font-size: 16px;
-    font-weight: 300;
-    position: absolute;
-    right: 15%;
-    color: white;
-  }
