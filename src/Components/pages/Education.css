@@ -23,7 +23,7 @@ body{
     align-items: center;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-    box-shadow: 1px 4px 4px 4px rgba(64, 64, 64, 0.336);
+    box-shadow: 1px 4px 4px 4px rgba(64, 64, 64, 0.247);
     min-height: 48px;
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
@@ -40,8 +40,7 @@ body{
     color: azure;
     width: 100%;
     background-color: orange;
-    /* border-top-right-radius: 12px;
-    border-top-left-radius: 12px; */
+    box-shadow: 5px 5px 5px 5px rgba(105, 56, 0, 0.17) inset;
     border-radius: 55px;
     padding: 8px 16px;
   }
