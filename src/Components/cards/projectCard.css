@@ -9,9 +9,23 @@
     flex-direction: column;
     justify-content: space-evenly;
     width: 350px;
-    min-height: 300px;
+    min-height: 255px;
     padding: 25px 20px;
     position: relative;
+    /* border-top-right-radius: 95px; */
+    border-radius: 12% 34% 0% 10% / 0% 28% 10% 0% ;
+    overflow:hidden;
+
+    /* border-bottom-left-radius: 75px; */
+}
+.cardContainer .project::before{
+    overflow:hidden;
+    content: "";
+    border: 60px solid rgba(255, 166, 0, 0.452);
+    position: absolute;
+    right: -4%;
+    top: -22%;
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.256);
 }
 
 .overlay {

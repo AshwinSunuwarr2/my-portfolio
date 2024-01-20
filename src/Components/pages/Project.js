@@ -33,6 +33,13 @@ export default function Project() {
           logo={react}
         />
       </div>
+      <div className="otherProjects">
+        <ProjectCard
+          title="Miscellaneous"
+          description="E-Bill, Calculator, Scissor Paper Rock, Quiz-Adventure etc are the other applications that helped me understand additional programming logics."
+          logo={react}
+        />
+      </div>
     </div>
   );
 }
